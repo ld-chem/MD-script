@@ -1,2 +1,2 @@
 # MD-script
-My scripts for molecular dynamic simulation
+My scripts for molecular dynamic simulation of polymer/network.
