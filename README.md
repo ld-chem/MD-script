@@ -20,3 +20,5 @@ zhuanhuan2.py -> add initial particles, rewrite the xml
 SCNP -> make model of single chain nanoparticles
 
 PAAM -> simulate the hydrogel reaction in situ
+
+ddmonomer.py -> delete the monomers in system
