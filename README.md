@@ -13,3 +13,5 @@ catch_init.py -> catch the initial beads and change the type of them
 
 dodelete.py && hoomd -> delete the init and cris, rewrite the xml
 
+xml_parser.py && chain.py && cg_topology.py && get_Cross.py -> get the simple closed loop of particles, and determine whether or not chains have crossed the plane
+
