@@ -50,7 +50,6 @@ zm = gala.ZeroMomentum(all_info)
 zm.setPeriod(1000)
 
 T = 1.0
-#P = 0.0610
 P = 1.6
 
 v = gala.VariantLinear()
@@ -65,7 +64,6 @@ axs = gala.AxialStretching(all_info, group)
 axs.setBoxLength(v, 'Z')
 axs.setBoxLength(v1, 'X')
 axs.setBoxLength(v1, 'Y')
-#axs.setRigidBody(True)
 axs.setPeriod(1000)
 app.add(axs)
 

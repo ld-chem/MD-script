@@ -47,9 +47,7 @@ sort_method.setPeriod(10000)
 zm = gala.ZeroMomentum(all_info)
 zm.setPeriod(10000)
 
-Temperature = 298
-T = Temperature/120.27236  #reduced unit T
-#P = 0.0610
+Temperature = 1.0
 P = 1
 
 v = gala.VariantLinear()

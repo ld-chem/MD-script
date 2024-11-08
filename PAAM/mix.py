@@ -11,6 +11,7 @@ mol4.setTopology("0-1")
 mol4.setBondLength(0.47)
 mol5 = molgen.Molecule(1)
 mol5.setParticleTypes("A1")
+
 gen=molgen.Generators(51.85,51.85,51.85)
 gen.addMolecule(mol4,59)
 gen.addMolecule(mol5,59)
