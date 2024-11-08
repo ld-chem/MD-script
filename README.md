@@ -24,4 +24,4 @@ PAAM -> simulate the hydrogel reaction in situ
 
 ddmonomer.py -> delete the monomers in system
 
-1a.py && 3a.py -> uniaxial and triaxial tensile tests
+1a.py && 3a.py && tensile.py && draw_tensile.py -> uniaxial and triaxial tensile tests and stress-strain curve drawing
