@@ -16,3 +16,7 @@ dodelete.py && hoomd -> delete the init and cris, rewrite the xml
 xml_parser.py && chain.py && cg_topology.py && get_Cross.py -> get the simple closed loop of particles, and determine whether or not chains have crossed the plane
 
 zhuanhuan2.py -> add initial particles, rewrite the xml
+
+SCNP -> make model of single chain nanoparticles
+
+PAAM -> simulate the hydrogel reaction in situ
