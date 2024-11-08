@@ -22,3 +22,5 @@ SCNP -> make model of single chain nanoparticles
 PAAM -> simulate the hydrogel reaction in situ
 
 ddmonomer.py -> delete the monomers in system
+
+1a.py && 3a.py -> uniaxial and triaxial tensile tests
