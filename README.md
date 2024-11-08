@@ -10,3 +10,6 @@ cm_remake.py -> move the polymer particle to the box center
 catch_bond.py -> catch the bond number of each frame (*.xml)
 
 catch_init.py -> catch the initial beads and change the type of them
+
+dodelete.py && hoomd -> delete the init and cris, rewrite the xml
+
