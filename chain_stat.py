@@ -90,7 +90,7 @@ def explore_all_connected_nodes(start_node, f):
 
     f.write(f"All nodes connected to node {start_node}: {sorted(all_related_nodes)}\n")
 
-with open('output.txt', 'w') as f:
+with open('data.txt', 'w') as f:
     starting_node = 1
     explore_all_connected_nodes(starting_node, f)
 
