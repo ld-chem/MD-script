@@ -1,7 +1,8 @@
 # MD-script
 My scripts for molecular dynamic simulation of polymer/network.
 
-XmlBuilder.py && __pycache__ && chain_stat.py -> get the index of beads on each chain
+XmlBuilder.py && __pycache__ && chain_stat.py && chain_stat_transfer.py -> 
+    get the index of beads on each chain, and change the form for ovito
 
 XmlParser.py && __pycache__ && density.py -> get the beads density around the center of mass
 
