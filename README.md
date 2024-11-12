@@ -24,7 +24,7 @@ PAAM -> simulate the hydrogel reaction in situ
 
 ddmonomer.py -> delete the monomers in system
 
-1a.py && 3a.py && tensile.py && draw_tensile.py -> uniaxial and triaxial tensile tests and stress-strain curve drawing
+1a.py && 3a.py && tension.py && tensile.py && draw_tensile.py -> uniaxial and triaxial tensile tests and stress-strain curve drawing
 
 resize.py -> additional solvents were added to the model to simulate the swelling process of the hydrogel, then nvt 
 
