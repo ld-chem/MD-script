@@ -33,3 +33,5 @@ monomer_calculate.py -> calculate the monomer conversion
 catch_Rg.py -> calculate the variation of Rg during uniaxial tensile
 
 rexml.py -> delete the beads that do not need anymore, rewrite one .xml
+
+angle_vec.py -> calculate the order parameter of polymer network
