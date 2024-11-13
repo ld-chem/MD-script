@@ -101,36 +101,45 @@ from sys import argv
 import networkx as nx
 import numpy as np
 import os
+
 top = nx.Graph()
 input_files = argv[1:]
 script_dir = os.path.dirname(os.path.abspath(__file__))
+
 for input_file in tqdm(input_files, desc='Processing files'):
-    xml = XmlParser(argv[1])
+    xml = XmlParser(input_file) 
     position_ = xml.data['position']
     types_ = xml.data['type']
-    for i,t in enumerate(xml.data['type']):
-        top.add_node(i,type=t)
+
+    for i, t in enumerate(xml.data['type']):
+        top.add_node(i, type=t)
+    
     for b in xml.data['bond']:
-        top.add_edge(b[1],b[2],bondtype=b[0])
-    target = set(['B','C','D'])
+        top.add_edge(b[1], b[2], bondtype=b[0])
+
+    target = set(['B', 'C', 'D'])
     nlist = list(top.nodes())
     for n in top.nodes:
         if top.nodes[n]['type'] in target:
             nlist.remove(n)
+
     n_hash = {}
-    for i,n in enumerate(nlist):
+    for i, n in enumerate(nlist):
         n_hash[n] = i
 
     position = position_[nlist]
     types = types_[nlist]
     bond = []
-    for i,j in top.edges:
+    for i, j in top.edges:
         if i not in n_hash.keys() or j not in n_hash.keys():
             continue
-        bond.append((top.edges[(i,j)]['bondtype'],n_hash[i],n_hash[j]))
+        bond.append((top.edges[(i, j)]['bondtype'], n_hash[i], n_hash[j]))
+
     xml.data['position'] = position
     xml.data['type'] = types
     xml.data['bond'] = bond
     xml.data['image'] = xml.data['image'][nlist]
+
     output_file = os.path.join(script_dir, f"processed_{os.path.basename(input_file)}")
-    XmlWriter(xml,output_file)
+    XmlWriter(xml, output_file)
+
