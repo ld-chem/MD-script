@@ -31,3 +31,5 @@ resize.py -> additional solvents were added to the model to simulate the swellin
 monomer_calculate.py -> calculate the monomer conversion
 
 catch_Rg.py -> calculate the variation of Rg during uniaxial tensile
+
+rexml.py -> delete the beads that do not need anymore, rewrite one .xml
