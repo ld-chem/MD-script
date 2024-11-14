@@ -40,7 +40,7 @@ class XmlParser(object):
             if element.tag == 'reaction':
                 self.data['reaction'] = []
                 reaction_list = element.text.strip().split('\n')
-                              while '' in reaction_list:
+                while '' in reaction_list:
                     reaction_list.remove('')
                 for l in reaction_list:
                     r = re.split(r'\s+', l)
