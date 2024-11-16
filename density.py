@@ -105,18 +105,45 @@ d2 = np.mean(np.asarray(d2),axis=0)/Vbins
 d3 = np.mean(np.asarray(d3),axis=0)/Vbins
 d4 = np.mean(np.asarray(d4),axis=0)/Vbins
 
-fig = plt.figure()
-plt.plot(r_middle, d1, lw=2, alpha=.6, label='H2O_density')
-plt.plot(r_middle, d2, lw=2, alpha=.6, label='chain_density')
-plt.plot(r_middle, d3, lw=2, alpha=.6, label='total_density')
-plt.plot(r_middle, d4, lw=2, alpha=.6, label='NP_density')
+#fig = plt.figure()
+#plt.plot(r_middle, d1, lw=2, alpha=.6, label='H2O_density')
+#plt.plot(r_middle, d2, lw=2, alpha=.6, label='chain_density')
+#plt.plot(r_middle, d3, lw=2, alpha=.6, label='total_density')
+#plt.plot(r_middle, d4, lw=2, alpha=.6, label='NP_density')
 #plt.legend(loc='upper right')
-plt.xlabel('\N{GREEK CAPITAL LETTER DELTA} r',fontsize=19)
-plt.ylabel('number density',fontsize=19)
-plt.legend(fontsize=19)
-fig.set_tight_layout('tight')
-plt.legend()
-plt.savefig('density.png', dpi = 300)
-np.savetxt('den.txt', np.vstack((r_middle, d1, d2, d3, d4)).T)
+#plt.xlabel('\N{GREEK CAPITAL LETTER DELTA} r',fontsize=19)
+#plt.ylabel('number density',fontsize=19)
+#plt.legend(fontsize=19)
+#fig.set_tight_layout('tight')
+#plt.legend()
+#plt.savefig('density.png', dpi = 300)
+#np.savetxt('den.txt', np.vstack((r_middle, d1, d2, d3, d4)).T)
 
+fig = plt.figure()
+
+# 设置边框样式
+for s in plt.gca().spines:
+    plt.gca().spines[s].set_linewidth(2)
+
+plt.tick_params('both', length=4, width=2, labelsize=15)
+
+# 修改线条样式
+plt.plot(r_middle, d1, lw=2, alpha=.6, label=r'H$_2$O density', color='blue', linestyle='-')
+plt.plot(r_middle, d2, lw=2, alpha=.6, label='chain density', color='#FF5733', linestyle='-')
+plt.plot(r_middle, d3, lw=2, alpha=.6, label='total density', color='red', linestyle='-')
+plt.plot(r_middle, d4, lw=2, alpha=.6, label='SCNP density', color='green', linestyle='-')
+
+# 坐标轴标签与字体大小
+plt.xlabel(r'$\Delta r$', fontsize=19)
+plt.ylabel('Number density', fontsize=19)
+
+# 调整图例，放在右上角，并调整字体大小
+plt.legend(fontsize=14, loc='upper right')
+
+# 调整布局和分辨率
+fig.set_tight_layout('tight')
+plt.savefig('density.png', dpi=330)
+
+# 保存数据
+np.savetxt('den.txt', np.vstack((r_middle, d1, d2, d3, d4)).T)
 
